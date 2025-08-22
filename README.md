@@ -48,18 +48,7 @@ Client‑side category filtering + text search
 
 Mobile‑first design
 
-Live data later: You can plug in a News API via a small server (for API‑key security and CORS), or keep it fully static.
-
-3) Project structure
-news-website/
-├─ index.html
-├─ style.css
-├─ script.js
-├─ assets/
-│  └─ placeholder.jpg (optional images)
-└─ server/               (optional — only for real API)
-   ├─ server.js          (Express proxy)
-   └─ .env               (API keys)
+Live data later: You can plug in a News API via a small server (for API‑key security and CORS), or keep it fully stati
 
 4) How it works (flow & logic)
 UI & Data Flow (static)
