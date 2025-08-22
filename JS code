@@ -1,0 +1,68 @@
+// Dummy news data
+const newsData = [
+  {
+    title: "AI is changing the world",
+    category: "technology",
+    description: "Artificial Intelligence is transforming industries from healthcare to education.",
+    image: "https://via.placeholder.com/400x200?text=AI+News"
+  },
+  {
+    title: "India wins cricket series",
+    category: "sports",
+    description: "India defeats rival team in an exciting final match.",
+    image: "https://via.placeholder.com/400x200?text=Cricket+News"
+  },
+  {
+    title: "Election results 2025",
+    category: "politics",
+    description: "The new government has been elected with majority votes.",
+    image: "https://via.placeholder.com/400x200?text=Politics+News"
+  },
+  {
+    title: "New movie breaks records",
+    category: "entertainment",
+    description: "Latest blockbuster becomes highest-grossing film of the year.",
+    image: "https://via.placeholder.com/400x200?text=Movie+News"
+  }
+];
+
+// Display news dynamically
+function displayNews(newsArray) {
+  const container = document.getElementById("news-container");
+  container.innerHTML = ""; // Clear previous
+  newsArray.forEach(news => {
+    const card = `
+      <div class="news-card">
+        <img src="${news.image}" alt="${news.title}">
+        <h3>${news.title}</h3>
+        <p>${news.description}</p>
+      </div>
+    `;
+    container.innerHTML += card;
+  });
+}
+
+// Show category
+function showCategory(category) {
+  if (category === "all") {
+    displayNews(newsData);
+  } else {
+    const filtered = newsData.filter(news => news.category === category);
+    displayNews(filtered);
+  }
+}
+
+// Search news
+function searchNews() {
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  const filtered = newsData.filter(news =>
+    news.title.toLowerCase().includes(query) ||
+    news.description.toLowerCase().includes(query)
+  );
+  displayNews(filtered);
+}
+
+// Initial load
+window.onload = () => {
+  displayNews(newsData);
+};
