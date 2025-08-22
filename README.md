@@ -52,15 +52,13 @@ Live data later: You can plug in a News API via a small server (for API‑key se
 
 4) How it works (flow & logic)
 UI & Data Flow (static)
+
 User actions (click category / submit search)
-        │
-        ▼
+
 script.js updates state: { category, query }
-        │
-        ▼
+        
 getFiltered() computes filtered list from newsData
-        │
-        ▼
+        
 renderCards() → builds article card HTML → injects into #news-container
 Key functions
    
