@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyNews</div>
+      <ul class="nav-links">
+        <li><a href="#" onclick="showCategory('all')">Home</a></li>
+        <li><a href="#" onclick="showCategory('technology')">Technology</a></li>
+        <li><a href="#" onclick="showCategory('sports')">Sports</a></li>
+        <li><a href="#" onclick="showCategory('politics')">Politics</a></li>
+        <li><a href="#" onclick="showCategory('entertainment')">Entertainment</a></li>
+      </ul>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search news...">
+        <button onclick="searchNews()">Search</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="news-container" class="news-container">
+      <!-- News articles will be displayed here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MyNews. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
