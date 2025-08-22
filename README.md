@@ -20,7 +20,7 @@ JavaScript → Handles category switching and searching through dummy articles.
 
 Later, it can be connected to a live News API for real news.
 
-Configuration (HTML/CSS/JS)
+1) Configuration (HTML/CSS/JS)
 
 This guide gives you everything you need to build, understand, configure, test, and deploy a responsive News website using HTML, CSS, and JavaScript. It includes:
 
@@ -36,7 +36,7 @@ Performance, accessibility, SEO, PWA notes
 
 Testing, deployment, troubleshooting, and roadmap
 
-1) What you’ll build
+2) What you’ll build
 
 A responsive News site with:
 
@@ -50,7 +50,7 @@ Mobile‑first design
 
 Live data later: You can plug in a News API via a small server (for API‑key security and CORS), or keep it fully static.
 
-2) Project structure
+3) Project structure
 news-website/
 ├─ index.html
 ├─ style.css
@@ -61,7 +61,7 @@ news-website/
    ├─ server.js          (Express proxy)
    └─ .env               (API keys)
 
-3) How it works (flow & logic)
+4) How it works (flow & logic)
 UI & Data Flow (static)
 User actions (click category / submit search)
         │
@@ -75,7 +75,7 @@ getFiltered() computes filtered list from newsData
 renderCards() → builds article card HTML → injects into #news-container
 Key functions
    
-4) Prerequisites
+5) Prerequisites
 
 Any modern browser (Chrome/Edge/Firefox/Safari)
 
